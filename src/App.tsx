@@ -1,7 +1,10 @@
 import React from "react";
 import "./index.css";
+import Hero from "./components/Hero";
 
 const App = () => {
+  const year = new Date().getFullYear();
+
   return (
     <div className="min-h-screen bg-white scroll-smooth">
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -17,13 +20,13 @@ const App = () => {
 
       <main className="pt-16">
         <div id="hero">
-          {/* <Hero /> */}
+          <Hero />
         </div>
       </main>
 
       <footer className="bg-gray-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">© 2026 Loakin. Layanan jual beli HP bekas dan rusak terpercaya.</p>
+          <p className="text-gray-400">© {year} Loakin. Layanan jual beli HP bekas dan rusak terpercaya.</p>
         </div>
       </footer>
     </div>
