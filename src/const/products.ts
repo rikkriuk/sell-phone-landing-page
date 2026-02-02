@@ -19,7 +19,7 @@ const products = [
    {
       id: 2,
       name: 'Baterai HP',
-      description: 'Baterai original dengan garansi untuk semua merek',
+      description: 'Baterai original dengan untuk semua merek',
       price: 'Mulai Rp 80.000',
       image: Battery,
       shopeeUrl: 'https://shopee.co.id/arf_part',

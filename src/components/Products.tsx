@@ -110,7 +110,7 @@ export function Products() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   className="text-lg text-gray-600 max-w-2xl mx-auto"
                >
-                  Dapatkan sparepart berkualitas tinggi untuk perbaikan HP Anda. Semua produk bergaransi dan tersedia di toko Shopee kami.
+                  Dapatkan sparepart berkualitas tinggi untuk perbaikan HP Anda. Semua produk tersedia di toko Shopee kami.
                </motion.p>
             </div>
 
@@ -141,7 +141,7 @@ export function Products() {
                </motion.a>
                
                <p className="text-sm text-gray-500 mt-4">
-                  ✓ Garansi Produk &nbsp; • &nbsp; ✓ Pengiriman Cepat &nbsp; • &nbsp; ✓ Harga Terjangkau
+                  &nbsp; ✓ Pengiriman Cepat &nbsp; • &nbsp; ✓ Harga Terjangkau
                </p>
             </motion.div>
          </div>
