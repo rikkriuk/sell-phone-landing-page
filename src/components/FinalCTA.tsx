@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
+import { whatsappText } from '../const/text';
 
 const FinalCTA = () => {
    const ref = useRef(null);
@@ -51,7 +52,9 @@ const FinalCTA = () => {
                transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
             >
                <motion.a
-                  href="https://wa.me/6281234567890"
+                  href={`https://wa.me/6285659565885?text=${encodeURIComponent(whatsappText)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-white text-blue-900 px-10 py-5 rounded-full text-lg font-bold shadow-2xl transition-colors duration-300 hover:bg-gray-50"
                   whileHover={{ 
                      scale: 1.05,

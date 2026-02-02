@@ -1,6 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { MapPin, Phone, Clock, Navigation } from 'lucide-react';
+import { whatsappText } from '../const/text';
 
 const Location = () => {
    const ref = useRef(null);
@@ -97,7 +98,9 @@ const Location = () => {
                   </motion.div>
 
                   <motion.a
-                     href="https://wa.me/6281234567890"
+                     href={`https://wa.me/6285659565885?text=${encodeURIComponent(whatsappText)}`}
+                     target="_blank"
+                     rel="noopener noreferrer"
                      whileHover={{ scale: 1.02 }}
                      transition={{ duration: 0.3 }}
                      className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 block"
@@ -108,7 +111,7 @@ const Location = () => {
                         </div>
                         <div className="flex-1">
                            <h4 className="font-semibold text-gray-900 mb-2">WhatsApp</h4>
-                           <p className="text-gray-600">+62 812-3456-7890</p>
+                           <p className="text-gray-600">+62 856-5956-5885</p>
                            <p className="text-sm text-green-600 font-semibold mt-1">Klik untuk chat langsung</p>
                         </div>
                      </div>
@@ -126,8 +129,7 @@ const Location = () => {
                         <div className="flex-1">
                            <h4 className="font-semibold text-gray-900 mb-2">Jam Operasional</h4>
                            <div className="space-y-1 text-gray-600">
-                           <p>Senin - Sabtu: 09:00 - 20:00</p>
-                           <p>Minggu: 10:00 - 18:00</p>
+                           <p>Setiap hari: 08:00 - 22:00</p>
                            <p className="text-sm text-orange-600 font-semibold mt-2">
                               * Pickup service available 24/7
                            </p>

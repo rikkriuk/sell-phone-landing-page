@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { whatsappText } from '../const/text';
+import BrokenPhone from '../assets/broken-phone.jpg'
 
 const Hero = () => {
    return (
@@ -35,7 +37,9 @@ const Hero = () => {
                      transition={{ duration: 0.5, delay: 0.6, ease: 'easeOut' }}
                   >
                      <motion.a
-                        href="https://wa.me/6281234567890"
+                        href={`https://wa.me/6285659565885?text=${encodeURIComponent(whatsappText)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full shadow-lg transition-colors duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -83,7 +87,7 @@ const Hero = () => {
                >
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                      <img
-                        src="https://images.unsplash.com/photo-1731391777974-18f9adb69490?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicm9rZW4lMjBkYW1hZ2VkJTIwc21hcnRwaG9uZSUyMHJlcGFpcnxlbnwxfHx8fDE3Njk5Njc0NTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                        src={BrokenPhone}
                         alt="HP Rusak atau Bekas"
                         className="w-full h-auto"
                      />

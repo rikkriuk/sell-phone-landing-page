@@ -128,7 +128,7 @@ export function Products() {
                className="text-center mt-12"
             >
                <motion.a
-                  href="https://shopee.co.id/arfixservice"
+                  href="https://shopee.co.id/arf_part"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}

@@ -39,7 +39,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
         </div>
         <div>
           <p className="font-semibold text-gray-900">{testimonial.name}</p>
-          <p className="text-sm text-gray-500">Verified Customer</p>
+          <p className="text-sm text-gray-500">Pembeli</p>
         </div>
       </div>
     </motion.div>
@@ -98,7 +98,7 @@ const CarouselView = () => {
                         </div>
                         <div>
                            <p className="font-semibold text-gray-900 text-lg">{testimonial.name}</p>
-                           <p className="text-sm text-gray-500">Verified Customer</p>
+                           <p className="text-sm text-gray-500">Pembeli</p>
                         </div>
                      </div>
                   </div>
