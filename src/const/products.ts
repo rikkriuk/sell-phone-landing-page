@@ -1,0 +1,58 @@
+const products = [
+   {
+      id: 1,
+      name: 'LCD Screen',
+      description: 'Layar LCD original & aftermarket untuk berbagai tipe HP',
+      price: 'Mulai Rp 150.000',
+      image: 'https://images.unsplash.com/photo-1746005514010-e7ab2bc3d210?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwTENEJTIwc2NyZWVuJTIwcmVwYWlyfGVufDF8fHx8MTc3MDAzMjY2Mnww&ixlib=rb-4.1.0&q=80&w=1080',
+      shopeeUrl: 'https://shopee.co.id/search?keyword=lcd+screen+hp',
+      badge: 'Popular',
+      badgeColor: 'bg-orange-500',
+   },
+   {
+      id: 2,
+      name: 'Baterai HP',
+      description: 'Baterai original dengan garansi untuk semua merek',
+      price: 'Mulai Rp 80.000',
+      image: 'https://images.unsplash.com/photo-1759294643364-2173070a3b1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG9uZSUyMGJhdHRlcnklMjByZXBsYWNlbWVudHxlbnwxfHx8fDE3NzAwMzI2NjN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      shopeeUrl: 'https://shopee.co.id/search?keyword=baterai+hp',
+      badge: 'Best Seller',
+      badgeColor: 'bg-green-500',
+   },
+   {
+      id: 3,
+      name: 'Konektor & Kabel Flexibel',
+      description: 'Konektor charging, audio jack, dan kabel fleksibel',
+      price: 'Mulai Rp 35.000',
+      image: 'https://images.unsplash.com/photo-1764712749001-3a5694e6db40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG9uZSUyMGNvbm5lY3RvciUyMGNhYmxlJTIwcGFydHN8ZW58MXx8fHwxNzcwMDMyNjYzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+      shopeeUrl: 'https://shopee.co.id/search?keyword=konektor+hp',
+   },
+   {
+      id: 4,
+      name: 'Tombol Volume & Power',
+      description: 'Tombol power, volume, dan home button berbagai tipe',
+      price: 'Mulai Rp 25.000',
+      image: 'https://images.unsplash.com/photo-1766902378649-5e5d15543dd3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG9uZSUyMHJlcGFpciUyMHRvb2xzJTIwcGFydHN8ZW58MXx8fHwxNzcwMDMyNjY0fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      shopeeUrl: 'https://shopee.co.id/search?keyword=tombol+volume+hp',
+   },
+   {
+      id: 5,
+      name: 'Kamera Belakang & Depan',
+      description: 'Modul kamera original untuk hasil foto maksimal',
+      price: 'Mulai Rp 100.000',
+      image: 'https://images.unsplash.com/photo-1746276584005-77376a4af877?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwY2FtZXJhJTIwbW9kdWxlfGVufDF8fHx8MTc3MDAzMjY2NHww&ixlib=rb-4.1.0&q=80&w=1080',
+      shopeeUrl: 'https://shopee.co.id/search?keyword=kamera+hp',
+      badge: 'New',
+      badgeColor: 'bg-blue-500',
+   },
+   {
+      id: 6,
+      name: 'Speaker & Microphone',
+      description: 'Speaker buzzer, earpiece, dan mic berkualitas tinggi',
+      price: 'Mulai Rp 40.000',
+      image: 'https://images.unsplash.com/photo-1760900051041-90417b9c110e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG9uZSUyMHNwZWFrZXIlMjBjb21wb25lbnRzfGVufDF8fHx8MTc3MDAzMjY2NXww&ixlib=rb-4.1.0&q=80&w=1080',
+      shopeeUrl: 'https://shopee.co.id/search?keyword=speaker+hp',
+   },
+];
+
+export { products };
