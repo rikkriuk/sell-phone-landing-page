@@ -1,4 +1,3 @@
-import React from "react";
 import "./index.css";
 import Hero from "./components/Hero";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -46,7 +45,7 @@ const App = () => {
       </main>
 
       <Footer />
-      
+
       <ScrollToTop />
     </div>
   );

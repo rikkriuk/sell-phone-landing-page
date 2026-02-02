@@ -1,4 +1,4 @@
-import { Smartphone, Cpu, HardDrive, Wifi, Battery, Monitor, Speaker } from 'lucide-react';
+import { Cpu, HardDrive, Wifi, Battery, Monitor, Speaker } from 'lucide-react';
 
 const devices = [
    {
