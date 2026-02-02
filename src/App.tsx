@@ -6,6 +6,8 @@ import Testimonials from "./components/Testimonials";
 import HowItWorks from "./components/HowItWorks";
 import SupportedDevices from "./components/SupportedDevice";
 import { Products } from "./components/Products";
+import Location from "./components/Location";
+import FinalCTA from "./components/FinalCTA";
 
 const App = () => {
   const year = new Date().getFullYear();
@@ -43,6 +45,12 @@ const App = () => {
         <div id="products">
           <Products />
         </div>
+
+        <div id="location">
+          <Location />
+        </div>
+
+        <FinalCTA />
       </main>
 
       <footer className="bg-gray-900 text-white py-8">
