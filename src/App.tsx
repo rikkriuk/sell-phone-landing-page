@@ -2,6 +2,8 @@ import React from "react";
 import "./index.css";
 import Hero from "./components/Hero";
 import WhyChooseUs from "./components/WhyChooseUs";
+import Testimonials from "./components/Testimonials";
+import HowItWorks from "./components/HowItWorks";
 
 const App = () => {
   const year = new Date().getFullYear();
@@ -26,6 +28,12 @@ const App = () => {
 
         <div id="why-choose-us">
           <WhyChooseUs />
+        </div>
+
+        <HowItWorks />
+
+        <div id="testimonials">
+          <Testimonials />
         </div>
       </main>
 
