@@ -59,7 +59,7 @@ const CarouselView = () => {
 
    return (
       <div className="relative max-w-2xl mx-auto">
-         <div className="relative !h-[320px] overflow-hidden">
+         <div className="relative !h-[330px] overflow-hidden">
             {testimonials.map((testimonial, index) => (
                <motion.div
                   key={index}
