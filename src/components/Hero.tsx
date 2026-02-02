@@ -14,7 +14,7 @@ const Hero = () => {
                      transition={{ duration: 0.5, ease: 'easeOut' }}
                      className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
                   >
-                     Mau Jual HP Lama atau Bekas?{' '}
+                     Mau Jual HP Rusak atau Bekas?{' '}
                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-orange-500">
                         Loakin aja!
                      </span>
