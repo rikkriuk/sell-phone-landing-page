@@ -16,7 +16,7 @@ const devices = [
 const specs = [
    {
       label: 'RAM',
-      range: '2GB - 16GB+',
+      range: '1GB - 16GB+',
    },
    {
       label: 'Storage',
