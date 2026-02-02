@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Testimonials from "./components/Testimonials";
 import HowItWorks from "./components/HowItWorks";
+import SupportedDevices from "./components/SupportedDevice";
+import { Products } from "./components/Products";
 
 const App = () => {
   const year = new Date().getFullYear();
@@ -34,6 +36,12 @@ const App = () => {
 
         <div id="testimonials">
           <Testimonials />
+        </div>
+
+        <SupportedDevices />
+
+        <div id="products">
+          <Products />
         </div>
       </main>
 
