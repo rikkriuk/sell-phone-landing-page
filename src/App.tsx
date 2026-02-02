@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import Hero from "./components/Hero";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 const App = () => {
   const year = new Date().getFullYear();
@@ -11,9 +12,9 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
-              <span className="text-white text-sm font-bold">LK</span>
+              <span className="text-white text-sm font-bold">AP</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Loakin</span>
+            <span className="text-xl font-bold text-gray-900">ARF PART</span>
           </div>
         </div>
       </header>
@@ -21,6 +22,10 @@ const App = () => {
       <main className="pt-16">
         <div id="hero">
           <Hero />
+        </div>
+
+        <div id="why-choose-us">
+          <WhyChooseUs />
         </div>
       </main>
 
