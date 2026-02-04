@@ -17,11 +17,6 @@ const benefits = [
       description: 'Data pribadi Anda dijamin aman dan terhapus permanen',
    },
    {
-      icon: Zap,
-      title: 'Pembayaran Langsung',
-      description: 'Transfer bank atau cash on the spot, pilihan ada di tangan Anda',
-   },
-   {
       icon: Award,
       title: 'Semua Kondisi',
       description: 'HP rusak, normal, atau bahkan mati total - kami terima semua!',
