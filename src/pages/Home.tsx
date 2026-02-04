@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CounterHero from "../components/Counter";
 import { OurServices } from "../components/OurServices";
+import ServiceSection from "../components/ServiceSection";
 
 const Home = () => {
    const [currentPage, setCurrentPage] = useState<'counter' | 'buyback'>('counter');
@@ -18,6 +19,8 @@ const Home = () => {
          <div id="services">
             <OurServices onBuySellClick={navigateToBuyback} />
          </div>
+
+         <ServiceSection />
       </>
    )
 }
