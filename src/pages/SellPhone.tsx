@@ -6,6 +6,7 @@ import SupportedDevices from "../components/SupportedDevice";
 import { Products } from "../components/Products";
 import Location from "../components/Location";
 import FinalCTA from "../components/FinalCTA";
+import { CTABuySellData } from "../const/cta";
 
 const SellPhone = () => {
    return (
@@ -34,7 +35,7 @@ const SellPhone = () => {
             <Location />
          </div>
 
-         <FinalCTA />
+         <FinalCTA {...CTABuySellData} />
       </>
    )
 }
