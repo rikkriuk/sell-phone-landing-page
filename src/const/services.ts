@@ -1,4 +1,4 @@
-import { Wrench, RefreshCw, Package } from 'lucide-react';
+import { Wrench, RefreshCw, Package, Smartphone, Battery, Cpu, Wifi } from 'lucide-react';
 import type { ServiceItem } from '../types/services';
 
 const services: ServiceItem[] = [
@@ -38,4 +38,51 @@ const services: ServiceItem[] = [
    },
 ];
 
-export default services;
+const serviceFeatures = [
+   {
+      icon: Smartphone,
+      text: 'Ganti LCD & Touchscreen',
+   },
+   {
+      icon: Battery,
+      text: 'Penggantian Baterai',
+   },
+   {
+      icon: Cpu,
+      text: 'Perbaikan Software & Hardware',
+   },
+   {
+      icon: Wifi,
+      text: 'Service Sinyal & Konektivitas',
+   },
+];
+
+const floatingTools = [
+   { icon: '🔧', delay: 0 },
+   { icon: '🔨', delay: 0.5 },
+   { icon: '⚡', delay: 1 },
+   { icon: '🛠️', delay: 1.5 },
+];
+
+const stats = [
+   {
+      value: "100+",
+      label: "HP Diperbaiki",
+      bg: "from-blue-50 to-blue-100",
+      text: "text-blue-900",
+   },
+   {
+      value: "95%",
+      label: "Tingkat Sukses",
+      bg: "from-orange-50 to-orange-100",
+      text: "text-orange-900",
+   },
+   {
+      value: "30 Hari",
+      label: "Garansi Service",
+      bg: "from-green-50 to-green-100",
+      text: "text-green-900",
+   },
+];
+
+export { services, serviceFeatures, floatingTools, stats };
