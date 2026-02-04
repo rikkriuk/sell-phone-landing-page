@@ -2,10 +2,13 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import { whatsappText } from '../const/text';
+import type { FinalCTAProps } from '../types/cta';
 
-const FinalCTA = () => {
+const FinalCTA = (data: FinalCTAProps) => {
    const ref = useRef(null);
    const isInView = useInView(ref, { once: true });
+
+   const { title, description } = data;
 
    return (
       <section ref={ref} className="relative py-20 sm:py-32 overflow-hidden">
@@ -39,10 +42,10 @@ const FinalCTA = () => {
                transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
             >
                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-                  Siap Menjual HP Lama atau Rusak Anda?
+                  {title}
                </h2>
                <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-                  Dapatkan penawaran terbaik hari ini. Gratis konsultasi, tanpa komitmen!
+                  {description}
                </p>
             </motion.div>
 
