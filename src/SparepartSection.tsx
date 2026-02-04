@@ -112,16 +112,19 @@ const SparepartSection = () => {
                transition={{ duration: 0.5, delay: 0.9 }}
                className="text-center"
             >
-               <motion.button
+               <motion.a
                   onClick={scrollToProducts}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-green-500 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-shadow duration-300"
+                  href="https://shopee.co.id/arf_part"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex cursor-pointer items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-shadow duration-300"
                >
                   <ShoppingBag className="w-5 h-5" />
                   <span>Lihat Semua Produk</span>
                   <ExternalLink className="w-5 h-5" />
-               </motion.button>
+               </motion.a>
                <p className="text-sm text-gray-500 mt-4">
                   Belanja online di Shopee atau kunjungi toko kami langsung
                </p>

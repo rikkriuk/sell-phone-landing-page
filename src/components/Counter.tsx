@@ -2,9 +2,11 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { MapPin, Clock, Phone } from 'lucide-react';
 import { shopImages } from '../const/counter';
+import { coreInformation } from '../const/core';
 
 const CounterHero = () => {
    const [currentImage, setCurrentImage] = useState(0);
+   const { mapsUrl } = coreInformation;
 
    useEffect(() => {
       const interval = setInterval(() => {
@@ -94,13 +96,16 @@ const CounterHero = () => {
                   </motion.div>
 
                   {/* CTA Button */}
-                  <motion.button
+                  <motion.a
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.5, delay: 0.4 }}
                      onClick={scrollToLocation}
                      whileHover={{ scale: 1.05 }}
                      whileTap={{ scale: 0.95 }}
+                     href={mapsUrl}
+                     target="_blank"
+                     rel="noopener noreferrer"
                      className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transition-shadow duration-300 inline-flex items-center gap-2"
                   >
                      <MapPin className="w-5 h-5" />
@@ -116,7 +121,7 @@ const CounterHero = () => {
                         }}
                         className="w-2 h-2 bg-white rounded-full"
                      />
-                  </motion.button>
+                  </motion.a>
                </div>
 
                {/* Right Image Carousel */}
