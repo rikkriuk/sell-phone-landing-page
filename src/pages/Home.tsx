@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CounterHero from "../components/Counter";
 import { OurServices } from "../components/OurServices";
 import ServiceSection from "../components/ServiceSection";
