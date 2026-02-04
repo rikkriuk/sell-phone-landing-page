@@ -2,14 +2,13 @@ import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { MapPin, Phone, Clock, Navigation } from 'lucide-react';
 import { whatsappText } from '../const/text';
+import { coreInformation } from '../const/core';
 
 const Location = () => {
    const ref = useRef(null);
    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-   const address = 'Jl. Palasari II, Palasari, Ciater, Subang, West Java 41281';
-   const businessName = 'ARFIX SERVICE HANDPHONE';
-   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(businessName + ', ' + address)}`;
+   const { address, businessName, mapsUrl } = coreInformation;
 
    return (
       <section ref={ref} className="py-16 sm:py-24 bg-gray-50">
