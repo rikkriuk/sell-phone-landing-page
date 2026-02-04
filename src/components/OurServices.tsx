@@ -1,7 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import type { OurServicesProps, ServiceCardProps } from '../types/services';
-import services from '../const/services';
+import { services } from '../const/services';
 
 const ServiceCard = ({ service, index, onBuySellClick }: ServiceCardProps) => {
   const ref = useRef(null);
