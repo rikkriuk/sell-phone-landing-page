@@ -16,6 +16,11 @@ const benefits = [
       title: 'Aman & Terpercaya',
       description: 'Data pribadi Anda dijamin aman dan terhapus permanen',
    },
+   // {
+   //    icon: Zap,
+   //    title: 'Pembayaran Langsung',
+   //    description: 'Transfer bank atau cash on the spot, pilihan ada di tangan Anda',
+   // },
    {
       icon: Award,
       title: 'Semua Kondisi',
