@@ -1,14 +1,34 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import { MapPin, Phone, Clock, Navigation } from 'lucide-react';
-import { whatsappText } from '../const/text';
+import { Navigation } from 'lucide-react';
 import { coreInformation } from '../const/core';
+import { locationItems } from '../const/location';
+import { spreadIf } from '../helpers/text';
+import type { LocationItem } from '../types/location';
 
 const Location = () => {
    const ref = useRef(null);
    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-   const { address, businessName, mapsUrl } = coreInformation;
+   const { businessName, mapsUrl } = coreInformation;
+
+   const renderButtonOrNote = (item: LocationItem) => {
+      if (item.type === 'hours') {
+         return (
+            <p className="text-sm text-orange-600 font-semibold mt-2">
+               {item.subDescription}
+            </p>
+         );
+      }
+      return (
+         <div className="inline-flex items-center gap-1 text-blue-900 hover:text-blue-700 font-semibold mt-3 transition-colors duration-300">
+            {item.buttonText}
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+         </div>
+      );
+   };
 
    return (
       <section ref={ref} className="py-16 sm:py-24 bg-gray-50">
@@ -69,73 +89,30 @@ const Location = () => {
                      <p className="text-blue-100">Layanan Jual Beli HP Bekas Terpercaya</p>
                   </div>
 
-                  <motion.div
-                     whileHover={{ scale: 1.02 }}
-                     transition={{ duration: 0.3 }}
-                     className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
-                  >
-                  <div className="flex items-start gap-4">
-                     <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-6 h-6 text-orange-600" />
-                     </div>
-                     <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 mb-2">Alamat</h4>
-                        <p className="text-gray-600 leading-relaxed">{address}</p>
-                        <a
-                           href={mapsUrl}
+                  {
+                     locationItems.map((item) => (
+                        <motion.a
+                           key={item.id}
+                           {...spreadIf('href', item?.url)}
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="inline-flex items-center gap-1 text-blue-900 hover:text-blue-700 font-semibold mt-3 transition-colors duration-300"
+                           whileHover={{ scale: 1.02 }}
+                           transition={{ duration: 0.3 }}
+                           className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 block"
                         >
-                           Lihat di Google Maps
-                           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                           </svg>
-                        </a>
-                     </div>
-                  </div>
-                  </motion.div>
-
-                  <motion.a
-                     href={`https://wa.me/6285659565885?text=${encodeURIComponent(whatsappText)}`}
-                     target="_blank"
-                     rel="noopener noreferrer"
-                     whileHover={{ scale: 1.02 }}
-                     transition={{ duration: 0.3 }}
-                     className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 block"
-                  >
-                     <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                           <Phone className="w-6 h-6 text-green-600" />
-                        </div>
-                        <div className="flex-1">
-                           <h4 className="font-semibold text-gray-900 mb-2">WhatsApp</h4>
-                           <p className="text-gray-600">+62 856-5956-5885</p>
-                           <p className="text-sm text-green-600 font-semibold mt-1">Klik untuk chat langsung</p>
-                        </div>
-                     </div>
-                  </motion.a>
-
-                  <motion.div
-                     whileHover={{ scale: 1.02 }}
-                     transition={{ duration: 0.3 }}
-                     className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
-                  >
-                     <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                           <Clock className="w-6 h-6 text-blue-600" />
-                        </div>
-                        <div className="flex-1">
-                           <h4 className="font-semibold text-gray-900 mb-2">Jam Operasional</h4>
-                           <div className="space-y-1 text-gray-600">
-                           <p>Setiap hari: 08:00 - 22:00</p>
-                           <p className="text-sm text-orange-600 font-semibold mt-2">
-                              * Pickup service available 24/7
-                           </p>
+                        <div className="flex items-start gap-4">
+                           <div className={`w-12 h-12 ${item.bgColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                              {item.icon && <item.icon className={`w-6 h-6 ${item.iconColor}`} />}
+                           </div>
+                           <div className="flex-1">
+                              <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
+                              <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                              {renderButtonOrNote(item)}
                            </div>
                         </div>
-                     </div>
-                  </motion.div>
+                        </motion.a>
+                     ))
+                  }
                </motion.div>
             </div>
          </div>
