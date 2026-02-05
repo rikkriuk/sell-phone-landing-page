@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-white scroll-smooth">
+    <div className="min-h-screen bg-white dark:bg-slate-900 scroll-smooth transition-colors duration-300">
       <Header />
 
       <main className="pt-16">
