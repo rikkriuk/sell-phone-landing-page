@@ -9,10 +9,10 @@ const BuySellSection = ({ onViewBuybackPage }: BuySellSectionProps) => {
    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
    return (
-      <section ref={ref} className="py-16 sm:py-24 bg-gradient-to-br from-orange-50 via-white to-orange-50 relative overflow-hidden">
+      <section ref={ref} className="py-16 sm:py-24 bg-gradient-to-br from-orange-50 dark:from-slate-800 via-white dark:via-slate-900 to-orange-50 dark:to-slate-800 relative overflow-hidden transition-colors duration-300">
 
-         <div className="absolute top-0 right-0 w-96 h-96 bg-orange-200 rounded-full opacity-20 blur-3xl" />
-         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200 rounded-full opacity-20 blur-3xl" />
+         <div className="absolute top-0 right-0 w-96 h-96 bg-orange-200 dark:bg-orange-500 rounded-full opacity-20 dark:opacity-10 blur-3xl" />
+         <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-200 dark:bg-blue-500 rounded-full opacity-20 dark:opacity-10 blur-3xl" />
 
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-12">
@@ -29,7 +29,7 @@ const BuySellSection = ({ onViewBuybackPage }: BuySellSectionProps) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+                  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
                >
                   Jual & Beli HP Bekas
                </motion.h2>
@@ -38,7 +38,7 @@ const BuySellSection = ({ onViewBuybackPage }: BuySellSectionProps) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-xl text-gray-600 max-w-2xl mx-auto"
+                  className="text-xl text-gray-600 dark:text-slate-300 max-w-2xl mx-auto"
                >
                   Upgrade HP lama Anda dengan mudah dan dapatkan harga terbaik. Proses cepat, aman, dan terpercaya!
                </motion.p>
@@ -54,7 +54,7 @@ const BuySellSection = ({ onViewBuybackPage }: BuySellSectionProps) => {
                         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                         whileHover={{ y: -5, transition: { duration: 0.3 } }}
-                        className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center"
+                        className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700 text-center"
                      >
                         <motion.div
                            whileHover={{ scale: 1.1, rotate: 5 }}
@@ -63,8 +63,8 @@ const BuySellSection = ({ onViewBuybackPage }: BuySellSectionProps) => {
                         >
                            <Icon className="w-7 h-7 text-white" />
                         </motion.div>
-                        <h3 className="font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                        <p className="text-sm text-gray-600">{benefit.description}</p>
+                        <h3 className="font-bold text-gray-900 dark:text-white mb-2">{benefit.title}</h3>
+                        <p className="text-sm text-gray-600 dark:text-slate-300">{benefit.description}</p>
                      </motion.div>
                   );
                })}
@@ -122,8 +122,8 @@ const BuySellSection = ({ onViewBuybackPage }: BuySellSectionProps) => {
                transition={{ duration: 0.5, delay: 0.9 }}
                className="text-center mt-8"
             >
-               <p className="text-gray-600">
-                  <span className="font-semibold text-orange-600">Mau beli HP second berkualitas?</span> Kami juga menyediakan HP bekas terawat dengan garansi
+               <p className="text-gray-600 dark:text-slate-300">
+                  <span className="font-semibold text-orange-600 dark:text-orange-400">Mau beli HP second berkualitas?</span> Kami juga menyediakan HP bekas terawat dengan garansi
                </p>
             </motion.div>
          </div>

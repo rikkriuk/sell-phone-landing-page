@@ -22,14 +22,14 @@ const SparepartSection = () => {
    };
 
    return (
-      <section ref={ref} className="py-16 sm:py-24 bg-white">
+      <section ref={ref} className="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
                <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
-                  className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full mb-6"
+                  className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-4 py-2 rounded-full mb-6"
                >
                   <ShoppingBag className="w-4 h-4" />
                   <span className="font-semibold">Sparepart Original</span>
@@ -39,7 +39,7 @@ const SparepartSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+                  className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
                >
                   Sparepart Lengkap & Berkualitas
                </motion.h2>
@@ -48,7 +48,7 @@ const SparepartSection = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="text-lg text-gray-600 max-w-2xl mx-auto"
+                  className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto"
                >
                   Tersedia berbagai sparepart original dan aftermarket untuk semua tipe HP
                </motion.p>
@@ -73,7 +73,7 @@ const SparepartSection = () => {
                            repeat: Infinity,
                            ease: 'easeInOut',
                         }}
-                        className="bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
+                        className="bg-gray-50 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
                      >
                         <div className="relative h-32 overflow-hidden">
                            <img
@@ -84,7 +84,7 @@ const SparepartSection = () => {
                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
                         <div className="p-3 text-center">
-                           <p className="font-semibold text-gray-900 text-sm">{part.name}</p>
+                           <p className="font-semibold text-gray-900 dark:text-white text-sm">{part.name}</p>
                         </div>
                      </motion.div>
                   </motion.div>
@@ -98,10 +98,10 @@ const SparepartSection = () => {
                      initial={{ opacity: 0, y: 20 }}
                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                      transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                     className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center"
+                     className="bg-gradient-to-br from-green-50 dark:from-green-900/30 to-green-100 dark:to-green-800/30 rounded-xl p-6 text-center"
                   >
-                     <h3 className="font-bold text-gray-900 mb-2">{info.title}</h3>
-                     <p className="text-sm text-gray-600">{info.description}</p>
+                     <h3 className="font-bold text-gray-900 dark:text-white mb-2">{info.title}</h3>
+                     <p className="text-sm text-gray-600 dark:text-slate-300">{info.description}</p>
                   </motion.div>
                ))}
             </div>
@@ -125,7 +125,7 @@ const SparepartSection = () => {
                   <span>Lihat Semua Produk</span>
                   <ExternalLink className="w-5 h-5" />
                </motion.a>
-               <p className="text-sm text-gray-500 mt-4">
+               <p className="text-sm text-gray-500 dark:text-slate-400 mt-4">
                   Belanja online di Shopee atau kunjungi toko kami langsung
                </p>
             </motion.div>

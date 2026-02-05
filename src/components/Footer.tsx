@@ -3,7 +3,7 @@ const Footer = () => {
    const githubUrl = "https://github.com/rikkriuk";
 
    return (
-      <footer className="bg-gray-900 text-white py-8">
+      <footer className="bg-gray-900 dark:bg-slate-950 text-white py-8 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col">
           <p className="text-gray-400">
             © {year} ARF PART. Layanan jual beli HP bekas dan rusak terpercaya. 

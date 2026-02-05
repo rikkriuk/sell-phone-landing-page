@@ -18,7 +18,7 @@ const BenefitCard = ({ benefit, index }: { benefit: typeof benefits[0]; index: n
             delay: index * 0.1,
             ease: 'easeOut',
          }}
-         className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+         className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-slate-700"
       >
          <motion.div
             whileHover={{ scale: 1.05 }}
@@ -27,21 +27,21 @@ const BenefitCard = ({ benefit, index }: { benefit: typeof benefits[0]; index: n
          >
             <Icon className="w-7 h-7 text-white" />
          </motion.div>
-         <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-         <p className="text-gray-600">{benefit.description}</p>
+         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{benefit.title}</h3>
+         <p className="text-gray-600 dark:text-slate-300">{benefit.description}</p>
       </motion.div>
    );
 }
 
 const WhyChooseUs = () => {
    return (
-      <section className="py-16 sm:py-24 bg-gray-50">
+      <section className="py-16 sm:py-24 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   Kenapa Pilih Kami?
                </h2>
-               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+               <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
                   Pengalaman jual beli HP bekas yang mudah, cepat, dan menguntungkan
                </p>
             </div>

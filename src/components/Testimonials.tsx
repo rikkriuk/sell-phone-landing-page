@@ -17,7 +17,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
         delay: index * 0.15,
         ease: 'easeOut',
       }}
-      className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+      className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-shadow duration-300"
     >
       <div className="flex gap-1 mb-4">
         {[...Array(testimonial.rating)].map((_, i) => (
@@ -25,7 +25,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
         ))}
       </div>
 
-      <p className="text-gray-700 mb-6 leading-relaxed">
+      <p className="text-gray-700 dark:text-slate-300 mb-6 leading-relaxed">
         "{testimonial.review}"
       </p>
 
@@ -38,8 +38,8 @@ function TestimonialCard({ testimonial, index }: { testimonial: typeof testimoni
           />
         </div>
         <div>
-          <p className="font-semibold text-gray-900">{testimonial.name}</p>
-          <p className="text-sm text-gray-500">Pembeli</p>
+          <p className="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+          <p className="text-sm text-gray-500 dark:text-slate-400">Pembeli</p>
         </div>
       </div>
     </motion.div>
@@ -75,7 +75,7 @@ const CarouselView = () => {
                   }}
                   className="absolute inset-0"
                >
-                  <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 h-full flex flex-col justify-between">
+                  <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-slate-700 h-full flex flex-col justify-between">
                      <div>
                         <div className="flex gap-1 mb-4">
                            {[...Array(testimonial.rating)].map((_, i) => (
@@ -98,7 +98,7 @@ const CarouselView = () => {
                         </div>
                         <div>
                            <p className="font-semibold text-gray-900 text-lg">{testimonial.name}</p>
-                           <p className="text-sm text-gray-500">Pembeli</p>
+                           <p className="text-sm text-gray-500 dark:text-slate-400">Pembeli</p>
                         </div>
                      </div>
                   </div>
@@ -114,7 +114,7 @@ const CarouselView = () => {
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                   currentIndex === index
                      ? 'bg-orange-500 w-8'
-                     : 'bg-gray-300 hover:bg-gray-400'
+                     : 'bg-gray-300 dark:bg-slate-600 hover:bg-gray-400 dark:hover:bg-slate-500'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                />
@@ -128,13 +128,13 @@ const Testimonials = () => {
    const [viewMode] = useState<'grid' | 'carousel'>('carousel');
 
    return (
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                Apa Kata Pelanggan Kami?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
                Ribuan pelanggan puas telah mempercayai kami
             </p>
          </div>

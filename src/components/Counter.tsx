@@ -31,7 +31,7 @@ const CounterHero = () => {
    };
 
    return (
-      <section className="relative pt-8 pb-16 sm:pt-12 sm:pb-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+      <section className="relative pt-8 pb-16 sm:pt-12 sm:pb-24 bg-gradient-to-b from-blue-50 dark:from-slate-800 to-white dark:to-slate-900 overflow-hidden transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                {/* Left Content */}
@@ -42,7 +42,7 @@ const CounterHero = () => {
                      transition={{ duration: 0.5 }}
                      className="inline-block"
                   >
-                     <div className="inline-flex items-center gap-2 bg-orange-100 text-orange-700 px-4 py-2 rounded-full mb-6">
+                     <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 px-4 py-2 rounded-full mb-6">
                         <MapPin className="w-4 h-4" />
                         <span className="text-sm font-semibold">Subang, Jawa Barat</span>
                      </div>
@@ -52,7 +52,7 @@ const CounterHero = () => {
                      initial={{ opacity: 0, y: 30 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.5, delay: 0.1 }}
-                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
                   >
                      Konter HP Terpercaya di Kota Anda
                   </motion.h1>
@@ -61,11 +61,11 @@ const CounterHero = () => {
                      initial={{ opacity: 0, y: 30 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.5, delay: 0.2 }}
-                     className="text-xl text-gray-600 mb-8"
+                     className="text-xl text-gray-600 dark:text-slate-300 mb-8"
                   >
-                     <span className="text-blue-900 font-semibold">Service</span> • 
-                     <span className="text-orange-600 font-semibold"> Jual Beli HP</span> • 
-                     <span className="text-blue-900 font-semibold"> Sparepart Lengkap</span>
+                     <span className="text-blue-900 dark:text-blue-400 font-semibold">Service</span> • 
+                     <span className="text-orange-600 dark:text-orange-400 font-semibold"> Jual Beli HP</span> • 
+                     <span className="text-blue-900 dark:text-blue-400 font-semibold"> Sparepart Lengkap</span>
                   </motion.p>
 
                   <motion.div
@@ -74,23 +74,23 @@ const CounterHero = () => {
                      transition={{ duration: 0.5, delay: 0.3 }}
                      className="grid sm:grid-cols-2 gap-4 mb-8"
                   >
-                     <div className="bg-white rounded-xl p-4 shadow-md border border-gray-100 flex items-center gap-3">
-                        <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                           <Clock className="w-5 h-5 text-green-600" />
+                     <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-md border border-gray-100 dark:border-slate-700 flex items-center gap-3">
+                        <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                           <Clock className="w-5 h-5 text-green-600 dark:text-green-400" />
                         </div>
                         <div className="text-left">
-                           <p className="text-xs text-gray-500">Buka Setiap Hari</p>
-                           <p className="text-sm font-semibold text-gray-900">09:00 - 20:00</p>
+                           <p className="text-xs text-gray-500 dark:text-slate-400">Buka Setiap Hari</p>
+                           <p className="text-sm font-semibold text-gray-900 dark:text-white">09:00 - 20:00</p>
                         </div>
                      </div>
 
-                     <div className="bg-white rounded-xl p-4 shadow-md border border-gray-100 flex items-center gap-3">
-                        <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                           <Phone className="w-5 h-5 text-blue-600" />
+                     <div className="bg-white dark:bg-slate-800 rounded-xl p-4 shadow-md border border-gray-100 dark:border-slate-700 flex items-center gap-3">
+                        <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                           <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                         </div>
                         <div className="text-left">
-                           <p className="text-xs text-gray-500">Hubungi Kami</p>
-                           <p className="text-sm font-semibold text-gray-900">+62 856-5956-5885</p>
+                           <p className="text-xs text-gray-500 dark:text-slate-400">Hubungi Kami</p>
+                           <p className="text-sm font-semibold text-gray-900 dark:text-white">+62 856-5956-5885</p>
                         </div>
                      </div>
                   </motion.div>
@@ -168,8 +168,8 @@ const CounterHero = () => {
                         ))}
                      </div>
 
-                     <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                        <p className="text-sm font-semibold text-gray-900">ARFIX SERVICE HANDPHONE</p>
+                     <div className="absolute top-6 left-6 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <p className="text-sm font-semibold text-gray-900 dark:text-white">ARFIX SERVICE HANDPHONE</p>
                      </div>
                   </div>
 

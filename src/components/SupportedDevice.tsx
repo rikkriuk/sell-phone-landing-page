@@ -21,13 +21,13 @@ const DeviceCard = ({ device, index }: { device: typeof devices[0]; index: numbe
                ease: 'easeInOut',
             },
          }}
-         className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 text-center"
+         className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl border border-gray-100 dark:border-slate-700 text-center"
       >
          <div className={`w-20 h-20 mx-auto bg-gradient-to-br ${device.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
             <Smartphone className="w-10 h-10 text-white" />
          </div>
-         <h3 className="text-2xl font-bold text-gray-900 mb-2">{device.name}</h3>
-         <p className="text-gray-600">{device.brands}</p>
+         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{device.name}</h3>
+         <p className="text-gray-600 dark:text-slate-300">{device.brands}</p>
       </motion.div>
    );
 }
@@ -47,15 +47,15 @@ const HardwareIssueCard = ({ issue, index }: { issue: typeof hardwareIssues[0]; 
             delay: index * 0.1,
             ease: 'easeOut',
          }}
-         className="bg-white rounded-xl p-5 shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+         className="bg-white dark:bg-slate-800 rounded-xl p-5 shadow-md border border-gray-100 dark:border-slate-700 hover:shadow-lg transition-shadow duration-300"
       >
          <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                <Icon className="w-6 h-6 text-white" />
             </div>
             <div className="flex-1">
-               <h4 className="font-semibold text-gray-900 mb-1">{issue.title}</h4>
-               <p className="text-sm text-gray-600">{issue.description}</p>
+               <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{issue.title}</h4>
+               <p className="text-sm text-gray-600 dark:text-slate-300">{issue.description}</p>
             </div>
          </div>
       </motion.div>
@@ -67,13 +67,13 @@ const SupportedDevices = () => {
    const isSpecsInView = useInView(specsRef, { once: true, margin: '-100px' });
 
    return (
-      <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 dark:from-slate-800 to-white dark:to-slate-900 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                   Perangkat yang Kami Terima
                </h2>
-               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+               <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
                   Dari Android hingga iPhone, semua merek kami layani
                </p>
             </div>
@@ -91,10 +91,10 @@ const SupportedDevices = () => {
                   transition={{ duration: 0.5 }}
                   className="text-center mb-8"
                >
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">
                      Spesifikasi yang Kami Terima
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-slate-300">
                      Semua spesifikasi, dari entry level hingga flagship
                   </p>
                </motion.div>
@@ -122,10 +122,10 @@ const SupportedDevices = () => {
             {/* Hardware Issues */}
             <div>
                <div className="text-center mb-8">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3">
                   Masalah Hardware yang Kami Terima
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-slate-300">
                   HP rusak? Tidak masalah! Kami tetap beli dengan harga fair
                   </p>
                </div>
@@ -144,7 +144,7 @@ const SupportedDevices = () => {
                   className="mt-8 text-center"
                >
                   <p className="text-gray-600 text-lg">
-                     <span className="font-semibold text-orange-600">Bahkan HP mati total?</span>
+                     <span className="font-semibold text-orange-600 dark:text-orange-400">Bahkan HP mati total?</span>
                      <span className="font-semibold"> Kami tetap tertarik!</span>
                   </p>
                </motion.div>

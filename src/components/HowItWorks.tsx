@@ -29,7 +29,7 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
                delay: index * 0.15,
                ease: 'easeOut',
             }}
-            className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 relative"
+            className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-slate-700 relative"
          >
             <motion.div
                initial={{ scale: 0 }}
@@ -49,8 +49,8 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
                <div className="w-14 h-14 bg-gradient-to-br from-blue-900 to-blue-700 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-7 h-7 text-white" />
                </div>
-               <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-               <p className="text-gray-600">{step.description}</p>
+               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{step.title}</h3>
+               <p className="text-gray-600 dark:text-slate-300">{step.description}</p>
             </div>
          </motion.div>
       </div>
@@ -59,13 +59,13 @@ const StepCard = ({ step, index }: { step: typeof steps[0]; index: number }) => 
 
 const HowItWorks = () => {
    return (
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                Cara Kerjanya
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto">
                4 langkah mudah untuk mengubah HP lama jadi uang tunai
             </p>
          </div>

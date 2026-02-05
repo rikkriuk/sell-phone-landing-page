@@ -4,7 +4,7 @@ import BrokenPhone from '../assets/broken-phone.jpg'
 
 const Hero = () => {
    return (
-      <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-16 sm:py-24 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 dark:from-slate-800 to-white dark:to-slate-900 py-16 sm:py-24 lg:py-32 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <div className="text-center lg:text-left">
@@ -12,7 +12,7 @@ const Hero = () => {
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.5, ease: 'easeOut' }}
-                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6"
                   >
                      Mau Jual HP Rusak atau Bekas?{' '}
                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-orange-500">
@@ -24,7 +24,7 @@ const Hero = () => {
                      initial={{ opacity: 0, y: 20 }}
                      animate={{ opacity: 1, y: 0 }}
                      transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
-                     className="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0"
+                     className="text-lg sm:text-xl text-gray-600 dark:text-slate-300 mb-8 max-w-xl mx-auto lg:mx-0"
                   >
                      Proses cepat, harga terbaik, pembayaran langsung. 
                      HP rusak atau normal, kami terima!

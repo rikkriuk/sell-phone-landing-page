@@ -19,10 +19,10 @@ const ServiceCard = ({ service, index, onBuySellClick }: ServiceCardProps) => {
         ease: 'easeOut',
       }}
       whileHover={{ y: -8, transition: { duration: 0.3 } }}
-      className={`relative bg-white rounded-2xl p-8 shadow-lg border-2 ${
+      className={`relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border-2 ${
         service.highlighted
-          ? 'border-orange-500 shadow-orange-100'
-          : 'border-gray-100 hover:border-gray-200'
+          ? 'border-orange-500 shadow-orange-100 dark:shadow-orange-900/20'
+          : 'border-gray-100 dark:border-slate-700 hover:border-gray-200 dark:hover:border-slate-600'
       } transition-all duration-300`}
     >
       {service.highlighted && (
@@ -39,11 +39,11 @@ const ServiceCard = ({ service, index, onBuySellClick }: ServiceCardProps) => {
         <Icon className="w-8 h-8 text-white" />
       </motion.div>
 
-      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
         {service.title}
       </h3>
 
-      <p className="text-gray-600 mb-6">
+      <p className="text-gray-600 dark:text-slate-300 mb-6">
         {service.description}
       </p>
 
@@ -57,7 +57,7 @@ const ServiceCard = ({ service, index, onBuySellClick }: ServiceCardProps) => {
             className="flex items-center gap-2"
           >
             <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.color}`} />
-            <span className="text-sm text-gray-700">{feature}</span>
+            <span className="text-sm text-gray-700 dark:text-slate-300">{feature}</span>
           </motion.div>
         ))}
       </div>
@@ -84,7 +84,7 @@ const OurServices = ({ onBuySellClick }: OurServicesProps) => {
   const isHeaderInView = useInView(headerRef, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-16 sm:py-24 bg-gray-50">
+    <section className="py-16 sm:py-24 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div ref={headerRef} className="text-center mb-12">
@@ -92,7 +92,7 @@ const OurServices = ({ onBuySellClick }: OurServicesProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
           >
             Layanan Kami
           </motion.h2>
@@ -100,7 +100,7 @@ const OurServices = ({ onBuySellClick }: OurServicesProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-lg text-gray-600 max-w-2xl mx-auto"
+            className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto"
           >
             Solusi lengkap untuk segala kebutuhan smartphone Anda
           </motion.p>

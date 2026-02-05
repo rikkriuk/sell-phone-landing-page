@@ -7,14 +7,14 @@ const CounterWhyChooseUs = () => {
    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
    return (
-      <section ref={ref} className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section ref={ref} className="py-16 sm:py-24 bg-gradient-to-b from-gray-50 dark:from-slate-800 to-white dark:to-slate-900 transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
                <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5 }}
-                  className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+                  className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
                >
                   Mengapa Pilih Konter Kami?
                </motion.h2>
@@ -22,7 +22,7 @@ const CounterWhyChooseUs = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
-                  className="text-lg text-gray-600 max-w-2xl mx-auto"
+                  className="text-lg text-gray-600 dark:text-slate-300 max-w-2xl mx-auto"
                >
                   Komitmen kami untuk memberikan layanan terbaik bagi pelanggan
                </motion.p>
@@ -46,7 +46,7 @@ const CounterWhyChooseUs = () => {
                            ease: 'easeOut',
                         }}
                         whileHover={{ y: -5, transition: { duration: 0.3 } }}
-                        className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                        className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-slate-700 hover:shadow-xl transition-shadow duration-300"
                      >
                         <motion.div
                            initial={{ scale: 0 }}
@@ -58,10 +58,10 @@ const CounterWhyChooseUs = () => {
                            <Icon className="w-8 h-8 text-white" />
                         </motion.div>
 
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                            {reason.title}
                         </h3>
-                        <p className="text-gray-600">{reason.description}</p>
+                        <p className="text-gray-600 dark:text-slate-300">{reason.description}</p>
                      </motion.div>
                   );
                })}

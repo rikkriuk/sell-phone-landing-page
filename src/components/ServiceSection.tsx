@@ -9,7 +9,7 @@ const ServiceSection = () => {
    const isInView = useInView(ref, { once: true, margin: '-100px' });
 
    return (
-      <section ref={ref} className="py-16 sm:py-24 bg-white relative overflow-hidden">
+      <section ref={ref} className="py-16 sm:py-24 bg-white dark:bg-slate-900 relative overflow-hidden transition-colors duration-300">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
                <motion.div
@@ -48,7 +48,7 @@ const ServiceSection = () => {
                                  ease: 'easeInOut',
                               },
                            }}
-                           className="absolute bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-2xl"
+                           className="absolute bg-white dark:bg-slate-700 rounded-full w-12 h-12 flex items-center justify-center shadow-lg text-2xl"
                            style={{
                               top: `${20 + index * 20}%`,
                               right: `${10 + (index % 2) * 10}%`,
@@ -75,7 +75,7 @@ const ServiceSection = () => {
                      initial={{ opacity: 0, y: 20 }}
                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                      transition={{ duration: 0.5 }}
-                     className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6"
+                     className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-4 py-2 rounded-full mb-6"
                   >
                   <Smartphone className="w-4 h-4" />
                      <span className="font-semibold">Service Profesional</span>
@@ -85,7 +85,7 @@ const ServiceSection = () => {
                      initial={{ opacity: 0, y: 20 }}
                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                      transition={{ duration: 0.5, delay: 0.1 }}
-                     className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+                     className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4"
                   >
                      Perbaikan HP Profesional & Terpercaya
                   </motion.h2>
@@ -94,7 +94,7 @@ const ServiceSection = () => {
                      initial={{ opacity: 0, y: 20 }}
                      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                      transition={{ duration: 0.5, delay: 0.2 }}
-                     className="text-lg text-gray-600 mb-8"
+                     className="text-lg text-gray-600 dark:text-slate-300 mb-8"
                   >
                      Teknisi berpengalaman siap menangani semua jenis kerusakan HP Anda dengan cepat dan bergaransi.
                   </motion.p>
@@ -108,13 +108,13 @@ const ServiceSection = () => {
                               initial={{ opacity: 0, x: -20 }}
                               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                               transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                              className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 hover:bg-blue-50 transition-colors duration-300"
+                              className="flex items-center gap-4 bg-gray-50 dark:bg-slate-800 rounded-xl p-4 hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors duration-300"
                            >
-                              <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm">
-                                 <FeatureIcon className="w-6 h-6 text-blue-600" />
+                              <div className="w-12 h-12 bg-white dark:bg-slate-700 rounded-lg flex items-center justify-center shadow-sm">
+                                 <FeatureIcon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                               </div>
-                              <span className="font-semibold text-gray-900">{feature.text}</span>
-                              <Check className="w-5 h-5 text-green-600 ml-auto" />
+                              <span className="font-semibold text-gray-900 dark:text-white">{feature.text}</span>
+                              <Check className="w-5 h-5 text-green-600 dark:text-green-400 ml-auto" />
                            </motion.div>
                         );
                      })}
@@ -130,7 +130,7 @@ const ServiceSection = () => {
                         stats.map((stat, index) => (
                            <div key={index} className={`text-center p-4 bg-gradient-to-br ${stat.bg} rounded-xl`}>
                               <p className={`text-2xl font-bold ${stat.text}`}>{stat.value}</p>
-                              <p className="text-xs text-gray-600">{stat.label}</p>
+                              <p className="text-xs text-gray-600 dark:text-slate-400">{stat.label}</p>
                            </div>
                         ))
                      }
