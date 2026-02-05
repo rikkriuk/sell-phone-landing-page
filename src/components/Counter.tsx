@@ -90,7 +90,7 @@ const CounterHero = () => {
                         </div>
                         <div className="text-left">
                            <p className="text-xs text-gray-500">Hubungi Kami</p>
-                           <p className="text-sm font-semibold text-gray-900">+62 812-3456-7890</p>
+                           <p className="text-sm font-semibold text-gray-900">+62 856-5956-5885</p>
                         </div>
                      </div>
                   </motion.div>
