@@ -2,7 +2,7 @@ import NoUserImage from "../assets/no-user-image.png";
 
 const testimonials = [
    {
-      name: 'Tedi Zussenk',
+      name: 'Tedi Zussenx',
       photo: NoUserImage,
       review: 'Bagus, terakhir beli layar hp disini. Harga bersaing dan pelayanan ramah. Prosesnya juga lumayan cepat, jadi nggak perlu nunggu lama.',
       rating: 5,
