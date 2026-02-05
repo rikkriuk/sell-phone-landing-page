@@ -1,14 +1,13 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
-import { whatsappText } from '../const/text';
 import type { FinalCTAProps } from '../types/cta';
 
 const FinalCTA = (data: FinalCTAProps) => {
    const ref = useRef(null);
    const isInView = useInView(ref, { once: true });
 
-   const { title, description } = data;
+   const { title, description, whatsappText } = data;
 
    return (
       <section ref={ref} className="relative py-20 sm:py-32 overflow-hidden">
