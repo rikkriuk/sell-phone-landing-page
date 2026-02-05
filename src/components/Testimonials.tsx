@@ -83,13 +83,13 @@ const CarouselView = () => {
                            ))}
                         </div>
 
-                        <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                        <p className="text-gray-700 dark:text-slate-300 text-lg mb-6 leading-relaxed">
                            "{testimonial.review}"
                         </p>
                      </div>
 
                      <div className="flex items-center gap-4">
-                        <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-900/10">
+                        <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-blue-900/10 dark:ring-slate-600">
                            <img
                               src={testimonial.photo}
                               alt={testimonial.name}
@@ -97,7 +97,7 @@ const CarouselView = () => {
                            />
                         </div>
                         <div>
-                           <p className="font-semibold text-gray-900 text-lg">{testimonial.name}</p>
+                           <p className="font-semibold text-gray-900 dark:text-white text-lg">{testimonial.name}</p>
                            <p className="text-sm text-gray-500 dark:text-slate-400">Pembeli</p>
                         </div>
                      </div>
