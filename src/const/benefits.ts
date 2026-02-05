@@ -61,4 +61,19 @@ const reasons = [
    },
 ];
 
-export { benefits, reasons };
+const buybackBenefits = [
+   {
+      id: 1,
+      title: "Transaksi Aman",
+   },
+   {
+      id: 2,
+      title: "Harga Kompetitif",
+   },
+   {
+      id: 3,
+      title: "Proses Cepat",
+   },
+]
+
+export { benefits, reasons, buybackBenefits };
